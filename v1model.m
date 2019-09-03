@@ -66,16 +66,16 @@ end
 % Get c1 and s1 models
 [c1,s1] = C1(imgmat,filters,filterSizes,c1Space,c1Scale,c1OL);
 
-if c1mean
-    s = size(c1{end});
-    stack = zeros(s(1)*s(2),length(c1));
-    for c = 1:length(c1)
-       stack(:,1) = reshape(imresize(mean(c1{c},3),[s(1),s(2)]),s(1)*s(2),1) ;
-    end
-    
-    c1 = reshape(mean(stack,2),s(1),s(2));
-    c1 = c1/max(c1(:));
-end
+% if c1mean
+%     s = size(c1{end});
+%     stack = zeros(s(1)*s(2),length(c1));
+%     for c = 1:length(c1)
+%        stack(:,1) = reshape(imresize(mean(c1{c},3),[s(1),s(2)]),s(1)*s(2),1) ;
+%     end
+%     
+%     c1 = reshape(mean(stack,2),s(1),s(2));
+%     c1 = c1/max(c1(:));
+% end
 
 
 
